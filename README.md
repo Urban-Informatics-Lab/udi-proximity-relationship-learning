@@ -12,9 +12,9 @@ This file contains code for preprosessing the data and learning relationships. F
 -between polygon and polygon elements<br>
 -between polygon and point elements<br>
 
--between point and linear elements
--between point and point elements
--between linear and linear elements
+-between point and linear elements<br>
+-between point and point elements<br>
+-between linear and linear elements<br>
 
 ## min_bounding_rect.py 
 This file contains the code to find the minimum-area bounding box of a set of 2D points. This is a third-party supporting file which was not developed by the authors. Please see the file for more information.
@@ -26,10 +26,10 @@ This file contains the code to compute the convex hull of a set of 2D points. Th
 
 This folder contains the data files on which we tests our framework. The folder contains the following 4 sub-folders:
 
--Polygon --> contains all polygon element files
--Linear --> contains all linear element files
--Point --> contains all point element files
--Block --> contains one file each (containing segments of corresponding linear elements) for all linear element files
+-Polygon --> contains all polygon element files<br>
+-Linear --> contains all linear element files<br>
+-Point --> contains all point element files<br>
+-Block --> contains one file each (containing segments of corresponding linear elements) for all linear element files<br>
  
 The 4 sub-folders inside this folder should be stored in the same directory as relationship_learning.py
 
