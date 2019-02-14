@@ -8,9 +8,9 @@ This file contains the functions that are called by the relationship_learning.py
 ## relationship_learning.py
 This file contains code for preprosessing the data and learning relationships. First the data from the element files( .xlsx) is loaded into memory and then the relationship learning algorithms are executed in the following order:
 
--between polygon and linear elements
--between polygon and polygon elements
--between polygon and point elements
+-between polygon and linear elements <br>
+-between polygon and polygon elements<br>
+-between polygon and point elements<br>
 
 -between point and linear elements
 -between point and point elements
