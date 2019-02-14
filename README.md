@@ -24,13 +24,18 @@ This file contains the code to compute the convex hull of a set of 2D points. Th
 
 ## Data Files
 
-This folder contains the data files (Extracted from Palo Alto Open Dataset) on which we test our framework. The folder contains the following 4 sub-folders:
+This folder contains the data files on which we test our framework. The folder contains the following 4 sub-folders:
 
 -Polygon --> contains all polygon element files<br>
 -Linear --> contains all linear element files<br>
 -Point --> contains all point element files<br>
--<a href : https://fusiontables.google.com/DataSource?docid=1Vn90L7N-dm434ts-EpWAwR7r44u8VVRAf3xoHHFX#rows:id=1>Block</a> --> contains one file each (containing segments of corresponding linear elements) for all linear element files<br>
+-Block](https://fusiontables.google.com/DataSource?docid=1Vn90L7N-dm434ts-EpWAwR7r44u8VVRAf3xoHHFX#rows:id=1) --> contains one file each (containing segments of corresponding linear elements) for all linear element files<br>
  
 The 4 sub-folders inside this folder should be stored in the same directory as relationship_learning.py
+Files contained in the sub-folders are extracted from [Palo Alto open dataset](http://xmap.cityofpaloalto.org/OpenGisData/)
+Links to the respective datasets:
+[Buildings](https://fusiontables.google.com/DataSource?docid=1qgVzuCFPBv-ODQjEYEu9a1qLpdGuuycZZJjUEH9H#rows:id=1)<br>
+[Trees](https://fusiontables.google.com/DataSource?docid=1XKUADil8qq1PT6xkJV3FF9bqLAZj2tBXwTTI_rc#rows:id=1) <br>
+[Streets & Blocks](https://fusiontables.google.com/DataSource?docid=1Vn90L7N-dm434ts-EpWAwR7r44u8VVRAf3xoHHFX#rows:id=1)<br>
 
 The program can only read .xlsx files right now.
