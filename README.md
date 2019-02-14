@@ -31,7 +31,7 @@ This folder contains the data files on which we test our framework. The folder c
 -Point --> contains all point element files<br>
 -Block --> contains one file each (containing segments of corresponding linear elements) for all linear element files<br>
  
-The 4 sub-folders inside this folder should be stored in the same directory as relationship_learning.py
+The 4 sub-folders inside this folder should be stored in the same directory as relationship_learning.py<br><br>
 Files contained in the sub-folders are extracted from [Palo Alto open dataset](http://xmap.cityofpaloalto.org/OpenGisData/)<br>
 Links to the respective datasets:<br>
 [Buildings](https://fusiontables.google.com/DataSource?docid=1qgVzuCFPBv-ODQjEYEu9a1qLpdGuuycZZJjUEH9H#rows:id=1)<br>
