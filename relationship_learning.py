@@ -51,24 +51,24 @@ b_name=[]
 #~\Point --> store all polygon files here and each file should be named with the class of elements it is storing for example - Trees, Light Pole, Traffic Sensor
 currentdir=os.getcwd()
 
-for file in os.listdir(currentdir+"/Polygon"):
+for file in os.listdir(currentdir+"/Data/Polygon"):
     if file.endswith(".xlsx"):
-		w_p.append(load_workbook(currentdir+"\\Polygon\\"+file))
+		w_p.append(load_workbook(currentdir+"\\Data\\Polygon\\"+file))
 		p_name.append(file.replace('.xlsx',''))
 		
-for file in os.listdir(currentdir+"/Block"):
+for file in os.listdir(currentdir+"/Data/Block"):
     if file.endswith(".xlsx"):
-		w_b.append(load_workbook(currentdir+"\\Block\\"+file))
+		w_b.append(load_workbook(currentdir+"\\Data\\Block\\"+file))
 		b_name.append(file.replace('.xlsx',''))
 		
-for file in os.listdir(currentdir+"/Point"):
+for file in os.listdir(currentdir+"/Data/Point"):
     if file.endswith(".xlsx"):
-		w_pt.append(load_workbook(currentdir+"\\Point\\"+file))
+		w_pt.append(load_workbook(currentdir+"\\Data\\Point\\"+file))
 		pt_name.append(file.replace('.xlsx',''))
 		
-for file in os.listdir(currentdir+"/Linear"):
+for file in os.listdir(currentdir+"/Data/Linear"):
     if file.endswith(".xlsx"):
-		w_l.append(load_workbook(currentdir+"\\Linear\\"+file))
+		w_l.append(load_workbook(currentdir+"\\Data\\Linear\\"+file))
 		l_name.append(file.replace('.xlsx',''))
 
 n_linear=len(w_l)
@@ -76,7 +76,7 @@ n_block=len(w_b)
 n_point=len(w_pt)
 n_poly=len(w_p)
 
-#The threshold values defined by the user for the analysis. The values should be define in m unless noted otherwise
+#The threshold values defined by the user for the analysis. The values should be define in meters unless noted otherwise
 rough_filter_thresh=.002# the unit is degrees
 p_p_thresh=100
 p_pt_thresh=10
@@ -1081,10 +1081,11 @@ for p_n in range(0,n_poly):
 			waste=1
 
 #code for storing workbook objects in disk. Each file is named with the corresponding element class (building, pond, lake) follwed by "-result"
+os.makedirs('Result\Polygon')
 while True:
 	try:
 		for p_n in range(0,n_poly):
-			w_p[p_n].save(p_name[p_n]+'-result.xlsx')
+			w_p[p_n].save(os.getcwd()+'\\Result\\Polygon\\'+ p_name[p_n]+'-result.xlsx')
 		
 		break
 	except IOError:
@@ -1343,10 +1344,11 @@ for pt_n in range(0,n_point):
 		except KeyError:
 			waste=1
 #code for storing workbook objects in disk. Each file is named with the corresponding element class (tree, light pole, traffic sensor) follwed by "-result"
+os.makedirs('Result\Point')
 while True:
 	try:
 		for pt_n in range(0,n_point):
-			w_pt[pt_n].save(pt_name[pt_n]+'-result.xlsx')
+			w_pt[pt_n].save(os.getcwd()+'\\Result\\Point\\'+pt_name[pt_n]+'-result.xlsx')
 		
 		break
 	except IOError:
@@ -1511,10 +1513,11 @@ for b_n in range(0,n_block):
 			waste=1
 
 #code for storing workbook objects in disk. Each file is named with the corresponding element class (tree, light pole, traffic sensor) follwed by "-result"
+os.makedirs('Result\Block')
 while True:
 	try:
 		for b_n in range(0,n_block):
-			w_b[b_n].save(b_name[b_n]+'-result.xlsx')
+			w_b[b_n].save(os.getcwd()+'\\Result\\Block\\'+b_name[b_n]+'-result.xlsx')
 		
 		break
 	except IOError:
